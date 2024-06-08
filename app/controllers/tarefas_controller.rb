@@ -16,10 +16,10 @@ class TarefasController < ApplicationController
   
     # POST /tarefas
     def create
-      @tarefa = @current_user.tarefas.new(tarefa_params)
+      result = CreateTarefa.call(usuario: @current_user, params: tarefa_params)
   
-      if @tarefa.save
-        render json: @tarefa, status: :created
+      if result.success?
+        render json: result.tarefa, status: :created
       else
         render json: @tarefa.errors, status: :unprocessable_entity
       end

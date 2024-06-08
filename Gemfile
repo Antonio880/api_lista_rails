@@ -16,6 +16,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'interactor'
 gem 'jwt', '~> 1.5', '>= 1.5.4'
 gem 'dotenv-rails', '~> 3.1', '>= 3.1.2'
+
+gem 'interactor'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

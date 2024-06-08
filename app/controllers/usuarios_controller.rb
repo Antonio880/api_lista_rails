@@ -14,14 +14,12 @@ class UsuariosController < ApplicationController
 
   # POST /usuarios
   def create
-    Rails.logger.debug("Parametros recebidos: #{params.inspect}")
+    result = CreateUsuario.call(params: usuario_params)
 
-    @usuario = Usuario.new(usuario_params)
-
-    if @usuario.save
-      render json: @usuario, status: :created, location: @usuario
+    if result.success?
+      render json: result.usuario, status: :created, location: result.usuario
     else
-      render json: @usuario.errors, status: :unprocessable_entity
+      render json: { errors: result.error }, status: :unprocessable_entity
     end
   end
 
