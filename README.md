@@ -25,14 +25,14 @@ Siga os passos abaixo para clonar o repositório e instalar as dependências:
 ````
 3. Instale as Dependências
 ````
-bundle install
+   bundle install
 ````
 4. Configure o Banco
 ````
-    rails db:create
-    rails db:migrate
+   rails db:create
+   rails db:migrate
 ````
 5. Depois de instalar as dependências e configurar o banco de dados, você pode rodar o projeto com o seguinte comando:
 ````
-  	rails server
+   rails server
 ````
