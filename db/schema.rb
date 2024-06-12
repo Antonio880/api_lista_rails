@@ -19,14 +19,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_08_055144) do
     t.index ["usuario_id"], name: "index_tarefas_on_usuario_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "usuarios", force: :cascade do |t|
     t.string "username"
     t.string "email"
